@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoaByte</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Enlace al CSS de AOS -->
+    <style>
+        /* Ajustar el tamaño de las fuentes y evitar desbordes */
+/* Ajustar el tamaño de las fuentes y evitar desbordes */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(45deg, yellow, red);
+    font-family: 'Press Start 2P', cursive;
+    overflow-x: hidden; /* Evitar el scroll horizontal */
+}
+
+.container {
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 0px black;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    flex: 1; /* Permite que el contenedor ocupe el espacio disponible */
+    padding: 0 10px; /* Añade padding para mejorar la visualización en móviles */
+    overflow-x: hidden; /* Asegura que no haya desbordamiento horizontal */
+}
+
+.title {
+    font-size: 5em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 4px 4px 0px black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 0 0; /* Ajuste del padding para mejor alineación */
+}
+
+.social-container {
+    background-color: orangered;
+    border-radius: 80px;
+    padding: 75px 150px;
+    display: inline-block;
+    margin-bottom: 100px;
+}
+
+.subtitle {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 0px black;
+    margin-bottom: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 3px 3px 0px black;
+}
+
+.pump {
+    background-color: orange;
+    background-image: url('https://pbs.twimg.com/profile_images/1748108741503803392/EmT4yP6S_400x400.jpg');
+    background-size: cover;
+}
+
+.telegram {
+    background-color: yellowgreen;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg');
+    background-size: cover;
+}
+
+.twitter {
+    background-color: yellow;
+    background-image: url('https://freelogopng.com/images/all_img/1690643591twitter-x-logo-png.png');
+    background-size: cover;
+}
+
+.row, .row2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Para evitar desbordamiento horizontal */
+}
+
+.row img, .row2 img {
+    max-width: 100%; /* Evita que las imágenes se desborden */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    max-height: 200px; /* Limitar la altura máxima */
+}
+
+.row img:hover, .row2 img:hover {
+    border-color: #333;
+}
+
+p {
+    font-size: 25px;
+    margin-top: 100px;
+    margin-right: 20px;
+}
+
+.sol img {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Estilos para el footer */
+footer {
+    width: 100%;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Asegura que el footer esté al final */
+    margin-top: 100px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+/* Media query para pantallas móviles */
+@media (max-width: 600px) {
+    .title {
+        font-size: 2.5em; /* Reducir el tamaño del título */
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .social-container {
+        padding: 20px 20px;
+    }
+
+    .subtitle {
+        font-size: 2em; /* Ajustar subtítulo */
+    }
+    .row{
+    display: left;
+    flex-wrap: wrap; /* Permitir que las imágenes se ajusten a múltiples líneas */
+    justify-content: center; /* Centrar las imágenes */
+    margin-bottom: 10px;
+    }
+
+    .row2{
+        display: right;
+    flex-wrap: wrap; /* Permitir que las imágenes se ajusten a múltiples líneas */
+    justify-content: center; /* Centrar las imágenes */
+    margin-bottom: 10px;
+
+    }.row img, .row2 img {
+    width: 40%; /* Ajustar a la mitad del ancho del contenedor */
+    height: auto; /* Mantener la proporción */
+    margin: 5px; /* Espacio entre imágenes */
+    }
+
+    .icons {
+        flex-direction: row; /* Mantiene los íconos en fila */
+        justify-content: space-between; /* Añade espacio entre los íconos */
+    }
+
+    .icon {
+        margin-bottom: 0; /* Elimina el margen inferior */
+        margin-right: 10px; /* Añade margen derecho entre los íconos */
+        width: 40px; /* Tamaño ajustado en móvil */
+        height: 40px;
+    }
+
+    .sol img {
+        width: 100px; /* Reducir tamaño de los logos en móvil */
+        height: 100px;
+    }
+
+    p {
+        font-size: 18px; /* Ajustar tamaño del texto */
+        margin-right: 20px;
+    }
+
+    footer p {
+        font-size: 0.9em; /* Reducir tamaño de la fuente en el footer */
+    }
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 1024px) {
+    .title {
+        font-size: 7em; /* Aumentar tamaño del título en pantallas grandes */
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+
+    .subtitle {
+        font-size: 3.5em; /* Aumentar subtítulo */
+    }
+
+    .icon {
+        width: 50px; /* Aumentar tamaño de los iconos */
+        height: 50px;
+    }
+
+    .social-container {
+        padding: 40px 70px; /* Aumentar el padding */
+    }
+
+    p {
+        font-size: 28px; /* Texto más grande */
+        margin-top: 100px;
+    }
+
+    .sol img {
+        width: 300px; /* Logos más grandes */
+        height: 300px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title" data-aos="fade-right">BoaByte</h1>
+        <div class="social-container" data-aos="fade-left">
+            <h2 class="subtitle">Socials</h2>
+            <div class="icons">
+                <a href="https://www.instagram.com/tu_perfil" target="_blank">
+                    <div class="icon pump"></div>
+                </a>
+                <a href="https://t.me/+W4toUf0yoLA4Yzc0" target="_blank">
+                    <div class="icon telegram"></div>
+                </a>
+                <a href="https://x.com/BoaByteSol" target="_blank">
+                    <div class="icon twitter"></div>
+                </a>
+            </div>
+        </div>
+        <div class="row" data-aos="fade-right">
+            <img src="https://i.imgur.com/hAFKKem.jpeg" alt="Foto 1">
+            <img src="https://i.imgur.com/8OTwIQT.jpeg" alt="Foto 2">
+            <img src="https://i.imgur.com/StYKX7m.jpeg" alt="Foto 3">
+            <img src="https://i.imgur.com/Uw4VMXH.jpeg" alt="Foto 4">
+            <img src="https://i.imgur.com/XHJWCGM.jpeg" alt="Foto 5">
+        </div>
+        <div class="row2" data-aos="fade-left">
+            <img src="https://i.imgur.com/49EhGDO.jpeg" alt="Foto 6">
+            <img src="https://i.imgur.com/i6PkQQu.jpeg" alt="Foto 7">
+            <img src="https://i.imgur.com/wDsM1Fe.jpeg" alt="Foto 8">
+            <img src="https://i.imgur.com/jnRv5yW.jpeg" alt="Foto 9">
+            <img src="https://i.imgur.com/Cn0gXSX.jpeg" alt="Foto 10">
+        </div>
+        <div data-aos="fade-right">
+            <p>Boabyte is a crypto set to launch on Pump.fun, backed with an exclusive collection of NFTs. By following BoaByte on social media or purchasing the coin, users can earn unique rewards. Get ready for a pump to the moon! 🌙🚀</p>
+        </div>
+        <div class="sol" data-aos="fade-left">
+            <img src="https://i.imgur.com/ZjgiNJ3.jpeg">
+            <img src="https://i.imgur.com/RUwAG6k.png">
+        </div>
+    </div>
+    <footer>
+        <p> &copy; 2024 BoaByte. All rights reserved. Follow us on <a href="https://x.com/BoaByteSol" target="_blank">X</a> and <a href="https://t.me/+W4toUf0yoLA4Yzc0" target="_blank">Telegram!</a></p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
